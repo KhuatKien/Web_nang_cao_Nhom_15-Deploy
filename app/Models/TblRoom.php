@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TblRoom extends Model
 {
-    protected $table = 'TblRoom';
+    protected $table = 'tblroom';
     protected $primaryKey = 'RoomNo';
     public $timestamps = false;
     public $incrementing = false;
