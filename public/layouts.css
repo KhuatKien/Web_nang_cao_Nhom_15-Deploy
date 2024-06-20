@@ -1,0 +1,1458 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+html {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+body{
+    background-image: url("./assets/image/background-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #cccccc;
+}
+
+#header{
+    width: 100%;
+    height:100px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 0 0 0 250px;
+    z-index: 2;
+}
+
+.logo{
+    width: 160px;
+    height: 78px;
+    padding: 20px 0;
+    margin: auto 0;
+}
+
+.logo img{
+    width: 160px;
+    height: 38px;
+}
+
+.menu {
+
+}
+
+.menu .list-menu{
+    
+}
+
+
+.menu .list-menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu .list-menu ul li{
+    position: relative;
+    padding: 25px 30px;
+}
+
+.menu .list-menu>ul>li>a{
+    display: block;
+    width: 100%;
+    height: 51px;
+    font-size: 18px;
+    line-height: 51px;
+    color: white;
+    transition: color 0.4s ease-in-out;
+}
+
+.menu .list-menu>ul>li>a:hover{
+    color: #AA8453;
+}
+
+.list-menu ul li.active a {
+    color: #AA8453;
+}
+
+.login ul{
+    display: flex;
+    list-style: none;
+}
+
+.login ul li{
+    position: relative;
+    padding: 25px 30px;
+}
+
+.login ul li a{
+    color: white;
+    font-size: 18px;
+    line-height: 51px;
+    transition: color 0.4s ease-in-out;
+}
+
+.login ul li a:hover{
+    color: #AA8453;
+}
+
+/* Content */
+#content{
+    height: 750px;
+}
+
+/* Room Page*/
+.tittle{
+    display: grid;
+    width: 100%;
+    height: 475px;
+    place-items: center;
+}
+
+.tittle .tittle-content {
+    width: 1140px;
+    height: 152px;
+}
+
+.tittle .tittle-content span{
+    display: inline-block;
+    font-size: 14px;
+    line-height:26.25px;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.tittle .tittle-content span img{
+    width: 15px;
+    height: 15px;
+}
+
+.tittle .tittle-content .name{
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 6px;
+    line-height:18.75px;
+    text-transform: uppercase;
+}
+
+.tittle .tittle-content .pagename{
+    color: #fff;
+    font-family: 'Gilda Display', sans-serif;
+    font-size: 60px;
+    line-height: 75px;
+}
+
+.roompage-body-content{}
+
+.roompage-body-content-section-1{
+    display: grid;
+    place-content: center;
+    background-color: #fff;
+    padding: 120px 0px 30px 0px;
+}
+
+.roompage-body-content-section-1 .roomlist{
+    padding: 0 12px
+}
+
+.roompage-body-content-section-1 .roomlist .roomdetail{
+    color: #666666;
+    font-size: 15px;
+    line-height:26.25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.roompage-body-content-section-1 .roomlist .roomdetail .room-card{
+    width: 1116px;
+    height: 465px;
+    display: flex;
+    position: relative;
+    margin-bottom: 90px;
+    align-items: center;
+}
+
+.room-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.room-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.room-card:nth-child(odd) {
+    flex-direction: row;
+}
+
+.room-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.room-card .room-details{
+    width: 558px;
+    height: 389px;
+    background-color: #ffffff;
+    position: absolute;
+    flex: 1;
+    z-index: 1;
+    padding: 44px 22px 44px 22px;
+}
+
+.room-details h3{
+    color: #ab8a62;
+    font-family: 'Gilda Display', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.room-details h3 span{
+    color: #666666;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.room-details h4{
+    color: #222222;
+    display: inline-block;
+    font-family: 'Gilda Display', sans-serif;
+    font-size: 35px;
+    line-height: 43.75px;
+    margin-bottom: 5px;
+}
+
+.room-details p{
+    width: 513px;
+    height: 53px;
+    color: #666666;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+    margin-bottom: 20px;
+
+}
+
+.room-details a{
+    width: 84px;
+    height: 26px;
+    color: #666666;
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 26.25px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 50px;
+}
+
+.room-details a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #c2a179;
+    transition: width 0.3s ease-out;
+}
+
+.room-details a:hover::after{
+    width: 100%;
+}
+
+.room-details .room-service{
+    display: flex;
+}
+
+.room-details .room-service ul{
+    width: 179px;
+    height: 73px;
+    padding: 0px 12px 0px 12px;
+    list-style: none;
+}
+
+.room-details .room-service ul li{
+    width: 155px;
+    height: 36px;
+    color: #666666;
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.room-details .room-service ul li img{
+    width: 20px;
+    height: 24px;
+    display: inline;
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.room-card .room-img{
+    width: 733px;
+    height: 458px;
+    position: absolute;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.room-card .room-img:hover{
+    transform: scale(0.97);
+}
+
+.room-card .room-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-zero {
+    right: 0;
+}
+
+.left-zero {
+    left: 0;
+}
+
+.room-details .boder{
+    width: 513px;
+    height: 1px;
+    background-color: #f7f4f0;
+    margin: 5px 0 20px 0;
+}
+
+.roompage-body-content-section-2{
+    width: 100%;
+    height: 767px;
+    background-color: #222222;
+    color: #666666;
+    font-size: 15px;
+    line-height:26.25px;
+    padding: 120px 0px 0px 0px;
+}
+
+.roompage-body-content-section-2-container{
+    display: flex;
+    justify-content: center;
+}
+
+.roompage-body-content-section-2 .info{
+    width: 380px;
+    height: 527px;
+    color: #666666;
+    list-style: 26.25px;
+    padding: 0 12px;
+}
+
+.roompage-body-content-section-2 .info .section-2-title{
+    color: #AA8453;
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 6px;
+    line-height: 26.25px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-bottom: 5px;
+}
+
+.roompage-body-content-section-2 .info .services{
+    color: #ffffff;
+    display: inline-block;
+    font-size: 46px;
+    line-height: 57.5px;
+    margin-bottom: 20px;
+}
+
+.roompage-body-content-section-2 .info>p{
+    color: #adadad;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 20px;
+}
+
+.roompage-body-content-section-2 .phone{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.roompage-body-content-section-2 .phone .phone-icon{
+    display: inline-block;
+    font-size: 40px;
+    line-height: 40px;
+    position: relative;
+    margin-right: 5px;
+}
+
+.roompage-body-content-section-2 .phone .phone-num .text-1{
+    color: #adadad;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+}
+
+.roompage-body-content-section-2 .phone .phone-num .text-2{
+    color: #8e6d45;
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    font-size: 27px;
+    letter-spacing: -1px;
+    line-height: 26.25px;
+}
+
+/* .roompage-body-content-section-2-container .slide-container{
+    width: 760px;
+    height: 527px;
+    
+    position: relative;
+    box-sizing: border-box;
+} */
+
+.slide{
+    width: 760px;
+    height: 527px;
+    display: flex;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.roompage-body-content-section-2-container .slide .slide-item{
+    width: 353px !important;
+    height:504px;
+    display: inline-block;
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+.slide .slide-item .slide-item-img{
+    width: 100%;
+    height: 202px;
+}
+
+.slide .slide-item .slide-item-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.slide .slide-item .slide-item-info{
+    width: 100%;
+    height: 273px;
+    display: grid;
+    place-content: center;
+    padding: 40px;
+    background-color: #f8f5f0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+    text-align: left;
+}
+
+.slide .slide-item .slide-item-info .item-name{
+    color: #222222;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'Gilda Display', serif;
+    margin-bottom: 20px;
+}
+
+.slide .slide-item .slide-item-info .item-amount{
+    color: #AA8453;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: 'Gilda Display', serif;
+    margin-bottom: 20px;
+}
+
+.slide .slide-item .slide-item-info .item-amount span{
+    color: #666666;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.slide .slide-item .slide-item-info .item-benefit{
+    list-style: none;
+}
+
+.slide .slide-item .slide-item-info .item-benefit i{
+    margin-right: 10px;
+}
+
+/* CSS room detail */
+
+.room-img-slider{
+    width: 100%;
+    height: 824px;
+}
+
+.room-detail-info{
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+    padding: 120px 0px 120px 0px;
+}
+
+.room-detail-info .info-header{
+    width: 1140px;
+    height: 137px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    padding: 0 12px;
+}
+
+.star-rating{
+    display: inline-block;
+    font-size: 15px;
+    line-height:26.25px;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.star-rating img{
+    width: 15px;
+    height: 15px;
+}
+
+.room-detail-info .info-header .name{
+    height: 26px;
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 6px;
+    line-height: 26.25px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.room-detail-info .info-header .room-name{
+    height: 58px;
+    color: #222222;
+    font-size: 46px;
+    line-height:57.5px;
+    margin-bottom: 20px;
+    font-family: 'Gilda Display', serif;
+}
+
+.info-content{
+    width: 1140px;
+    height: 700px;
+    display: flex;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    padding: 0 12px;
+}
+
+.info-content .info-content-left{
+    width: 760px;
+    height: 700px;
+}
+
+.info-content .info-content-left p{
+    color: #666666;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+}
+
+.info-content .info-content-left>p{
+    margin-bottom: 30px;
+}
+
+.info-content .info-content-left .check-in-out{
+    width: 780px;
+    height: 143px;
+    display: flex;
+}
+
+.info-content .info-content-left .check-in-out div{
+    padding: 0 12px;
+}
+
+.info-content .info-content-left h6{
+    color: #222222;
+    font-family: 'Gilda Display', serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.info-content .info-content-left ul{
+    list-style: none;
+    width: 356px;
+    height: 30px;
+}
+
+.info-content .info-content-left .check-in-out li{
+    align-items: center;
+    color: #666;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+    text-align: left;
+}
+
+.info-content-left .check-in-out li i{
+    margin-right: 15px;
+}
+
+.info-content .info-content-left .special-check-in{
+    width: 760px;
+    height: 123px;
+    color: #666666;
+}
+
+.info-content .info-content-left div p{
+    margin-bottom: 20px;
+}
+
+.info-content .info-content-right{
+    width: 285px;
+    height: 700px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    padding: 0 12px;
+    margin-left: 95px;
+}
+
+.info-content .info-content-right h6{
+    height: 30px;
+    color: #222222;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Gilda Display', serif;
+    margin-bottom: 20px;
+}
+
+.info-content .info-content-right ul{
+    height: 208px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    list-style: none;
+}
+
+.info-content .info-content-right ul li{
+    align-items: center;
+    color: #666666;
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.info-content .info-content-right ul li img{
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+}
+
+.hotel-booking-form{
+    width: 100%;
+    height: 680px;
+    display: grid;
+    place-items: center;
+}
+
+.hotel-booking-form .hotel-booking-form-content{
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reservation{
+    width: 475px;
+    height: 362px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    padding: 0 12px;
+}
+
+.reservation .star-rating{
+    width: 100%;
+    height:28px;
+    margin-bottom: 20px;
+}
+
+.reservation h5{
+    width: 100%;
+    height: 90px;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.reservation .phone{
+    align-items: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.reservation .phone img{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+.reservation .phone .phone-num p{
+    color: #ffff;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+}
+
+.reservation .phone .phone-num span{
+    color: #ffff;
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    font-size: 27px;
+    letter-spacing: -1px;
+    line-height: 26.25px;
+}
+
+.reservation>p{
+    color: #ffff;
+    display: inline;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13.125px;
+    line-height: 26.25px;
+}
+
+.form{
+    width: 451px;
+    background-color: #f8f5f0;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    padding: 45px;
+}
+
+.form h6{
+    height: 19px;
+    color: #666666;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 6px;
+    line-height: 18.75px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.form h4{
+    height: 50px;
+    color: #222222;
+    font-family: 'Gilda Display', serif;
+    font-size: 27px;
+    font-weight: normal;
+    line-height: 33.75px;
+    /* margin-bottom: 20px; */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    appearance: none;
+    color: #aaa;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+.form-group select {
+    color: #aaa;
+}
+
+.form-group select:focus option:disabled {
+    color: transparent;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #AA8453;
+    outline: none;
+}
+
+.form-group .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #aaa;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #AA8453;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #8e6d45;
+}
+
+/* CSS About page */
+
+.about-content-secton-1{
+    display: flex;
+    justify-content: center;
+    padding: 120px 0 120px 0;
+    background-color: #ffffff;
+}
+
+.about-content-secton-1 .about-section-1-info{
+    width: 570px;
+    height: 450px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    padding: 0 12px;
+}
+
+.about-section-1-info h5{
+    width: 100%;
+    height: 26px;
+    color: #666666;
+    font-size: 15px;
+    letter-spacing: 6px;
+    line-height: 26.25px;
+    font-weight: normal;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.about-section-1-info .section-title{
+    width: 100%;
+    height: 115px;
+    color: #222222;
+    font-size: 46px;
+    font-family: 'Gilda Display', serif;
+    line-height: 57.5px;
+    margin-bottom: 20px;
+}
+
+.about-section-1-info>p{
+    width: 100%;
+    height: 79px;
+    color: #666666;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+    margin-bottom: 20px;
+}
+
+.about-section-1-info .about-phone{
+    display: flex;
+    align-items: center;
+}
+
+.about-section-1-info .about-phone img{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.about-section-1-info .about-phone .phone-num p{
+    width: 140px;
+    height: 26px;
+    color: #666666;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+}
+
+.about-section-1-info .about-phone .phone-num span{
+    width: 140px;
+    height: 26px;
+    color: #8e6d45;
+    font-family: 'Barlow', sans-serif;
+    font-size: 27px;
+    letter-spacing: -1px;
+    line-height: 26.25px;
+}
+
+.about-content-secton-1 .about-img{
+    width: 285px;
+    height: 480px;
+    padding: 0 12px;
+}
+
+.about-content-secton-1 .about-img-1{
+    padding: 90px 0 42px 0;
+    margin-right: 5px;
+}
+
+.about-content-secton-1 .about-img-2{
+    padding: 0 0 132px 0;
+}
+
+.about-content-secton-1 .about-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.hotel-facility{
+    width: 100%;
+    height: 850px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    padding: 120px 0;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.hotel-facility .facility-title{
+    width: 1140px;
+    height: 109px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    padding: 0 12px;
+}
+
+.hotel-facility .facility-title h6{
+    width: 100%;
+    height: 26px;
+    color: #666666;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26.25px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.hotel-facility .facility-title h1{
+    width: 100%;
+    height: 58px;
+    color: #222222;
+    font-size: 46px;
+    line-height: 57.5px;
+    font-weight: normal;
+    font-family: 'Gilda Display', serif;
+}
+
+.hotel-facility .facility-content{
+    display: flex;
+    width: 1140px;
+    flex-wrap: wrap;
+    padding: 0 12px;
+    justify-content: space-between;
+}
+
+.hotel-facility .facility-content .service{
+    width: 356px;
+    height: 221px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 26.25px;
+    margin-bottom: 30px;
+    border: 1px solid #f1eeeb;
+    padding: 30px 20px;
+}
+
+.hotel-facility .facility-content .service img{
+    width: 45px;
+    height: 46px;
+    margin-bottom: 20px;
+}
+
+.hotel-facility .facility-content .service h5{
+    width: 100%;
+    height: 30px;
+    color: #222222;
+    font-family: 'Gilda Display', serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.hotel-facility .facility-content .service p{
+    width: 100%;
+    height:53px;
+    color: #666666;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 26.25px;
+}
+
+/* CSS footer */
+
+.footer {
+    background-color: #1D1D1F;
+    color: white;
+}
+
+.footer-top {
+    display: flex;
+    padding: 0 170px;
+    padding-bottom: 25px;
+    background-color: #202020;
+    height: 425px;
+}
+
+.footer-top-1 {
+    flex-basis: 33.33%;
+    padding-top: 80px;
+}
+
+.footer-top-1 h4 {
+    font-size: 24px;
+    color: #eaeaf3;
+    padding-bottom: 25px;
+    font-family: 'Gilda Display', serif;
+    font-weight: 200;
+}
+
+.footer-top-1 p {
+    width: 356px;
+    height: 79px;
+    line-height: 1.65;
+    font-size: 18px;
+    color: #adadad;
+    margin-bottom: 10px;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select::after {
+    content: '\f57d'; /* Unicode của icon quả địa cầu trong Font Awesome */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 16px;
+    color: #666;
+    pointer-events: none;
+    transform: translateY(-50%);
+    margin-top: 12px;
+    margin-right: 14px;
+}
+
+.footer-top-1 select {
+    width: 160px;
+    height: 50px;
+    background-color: #282828;
+    color: #adadad;
+    font-size: 16px;
+    border-color: #282828;
+    border-style: solid;
+    border-width: 0.8;
+    align-items: center;
+    padding: 0 30px;
+    margin-top: 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.footer-top-2 {
+    flex-basis: 33.33%;
+    padding-top: 80px;
+    padding-left: 100px;
+}
+
+.footer-top-2 h4 {
+    font-size: 24px;
+    color: #eaeaf3;
+    padding-bottom: 25px;
+    font-family: 'Gilda Display', serif;
+    font-weight: 200;
+}
+
+
+.footer-top-2 li {
+    list-style: none;
+    margin: 0 0 6px;
+}
+
+.footer-top-2 li a {
+    font-size: 18px;
+    color: #86868b;
+}
+
+.footer-top-2 li a:hover {
+    text-decoration: underline;
+}
+
+.footer-top-3 {
+    flex-basis: 33.33%;
+    padding-top: 80px;
+}
+
+.footer-top-3 h4 {
+    font-size: 24px;
+    color: #eaeaf3;
+    padding-bottom: 25px;
+    font-family: 'Gilda Display', serif;
+    font-weight: 200;
+}
+
+.footer-top-3-p1{
+    color: #adadad;
+    font-size: 18px;
+    width: 250px;
+    line-height: 1.65;
+}
+
+.footer-top-3-p2{
+    font-size: 24px;
+    margin: 20px 0;
+    font-family: 'Gilda Display', serif;
+}
+
+.footer-top-3-p3{
+    border-bottom: 1px solid #AA8453;
+    width: 148px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-icon{
+    display: flex;
+}
+
+.footer-icon i{
+    font-size: 15px;
+    margin: 10px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-icon i:hover {
+    color: #AA8453;
+    cursor: pointer;
+}
+
+.footer-icon-1 {
+    margin-left: -10px;
+}
+
+.footer-bottom {
+    background-color: #1E1E1E;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom-content p {
+    font-size: 16px;
+    color: #adadad;
+}
+
+
+/* Restaurant */
+
+.restaurant-about {
+    background-color:#fff ;
+    padding-bottom: 100px;
+    margin-top: 750px;
+}
+    
+.res-content-top{
+    width: 1140px;
+    height: 138px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+    
+.res-content-top i {
+    font-size: 16px;
+    color: #E4A853;
+}
+    
+.res-content-top-p1 {
+    color: #666;
+    font-size: 16px;
+    margin: 16px 0;
+    letter-spacing: 6px;
+}
+    
+.res-content-top-p2{
+    font-size: 50px;
+    color: #222;
+    font-family: 'Gilda Display', serif;
+}
+    
+.res-content-bottom{
+    width: 1140px;
+    margin: 0 auto;
+    margin-top: 140px;
+}
+    
+.res-content-bottom p{
+    font-size: 18px;
+    color: #666;
+    letter-spacing: 1.2 px;
+    line-height: 26.25px;
+}
+    
+.res-content-bottom h6 {
+    color: #222;
+    font-size: 24px;
+    margin: 20px 0;
+    font-weight: 400;
+    font-family: 'Gilda Display', serif;
+}
+    
+.clock {
+    display: flex;
+    margin: 8px 0;
+}
+    
+.clock p{
+    font-size: 18px;
+}
+    
+.clock i {
+    font-size: 16px;
+    color: #E4A853;
+    padding-top: 6px;
+    padding-right: 10px;
+}
+
+.restaurant-menu {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #222;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.menu-title {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.menu-title-p1 {
+    color: #aa8453;
+    font-size: 16px;
+    letter-spacing: 6px;
+}
+
+.menu-title-p2 {
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+    margin: 10px 0;
+}
+
+.menu-type {
+    max-width: 1140px;
+    margin: 40px auto 0;
+    font-family: 'Gilda Display', serif;
+    text-align: center;
+}
+
+.menu-type-item ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menu-type-item ul li {
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    margin: 0 20px;
+    font-weight: 300;
+    padding: 10px 30px;
+    transition: color 0.3s ease;
+}
+
+.menu-type-item ul li:hover {
+    color: #aa8453;
+    cursor: pointer;
+}
+
+.menu-list {
+    max-width: 1140px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-list-left,
+.menu-list-right {
+    width: 48%;
+}
+
+.menu-list-left h5,
+.menu-list-right h5 {
+    color: #aa8453;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1.6px;
+    border-bottom: 1px dashed #AA8453;
+    padding-bottom: 8px;
+    font-family: 'Gilda Display', serif;
+    margin: 20px 0;
+}
+
+.menu-list-left p,
+.menu-list-right p {
+    color: #adadad;
+    font-size: 18px;
+    margin: 10px 0;
+    letter-spacing: 1.6px;
+}
+
+.restaurant-menu button {
+    width: 150px;
+    height: 44px;
+    margin-top: 40px;
+    background-color: #AA8453;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.restaurant-menu button a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 44px;
+}
+
+.restaurant-menu button:hover {
+    background-color: #1D1D1F;
+}
+
+.restaurant-message-container {
+    max-width: 736px;
+    margin: 90px auto;
+    text-align: center;
+}
+
+.restaurant-message-container h6 {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 6px;
+    font-weight: 400;
+}
+
+.restaurant-message-container h4 {
+    margin: 16px 0;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Gilda Display', serif;
+}
+
+.restaurant-message-container p {
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 1.5;
+}
+
+.restaurant-message-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.restaurant-message-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.restaurant-message-info-content {
+    text-align: left;
+}
+
+.restaurant-message-info-content span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.restaurant-message-info-content i {
+    font-size: 8px;
+    color: #AB844F;
+    margin-right: 2px;
+}
+
+.restaurant-message-info-content h6 {
+    color: #fff;
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+.restaurant-message-info-content p {
+    font-size: 12px;
+    color: #fff;
+}
